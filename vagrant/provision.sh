@@ -22,15 +22,15 @@ ldconfig
 cd ..
 rm -r leptonica-1.71
 
-tar -xzf /vagrant/vendor/source/tesseract-ocr-4da712d04db9.tar.gz
-cd tesseract-ocr-4da712d04db9
+tar -xzf /vagrant/vendor/source/tesseract-3.04.00.tar.gz
+cd tesseract-3.04.00
 ./autogen.sh
 ./configure
 make
 checkinstall -y
 ldconfig
 cd ..
-rm -r tesseract-ocr-4da712d04db9
+rm -r tesseract-3.04.00
 
 # copy traineddata to /usr/local/share/tessdata/
 cp /vagrant/vendor/tessdata/* /usr/local/share/tessdata/.
